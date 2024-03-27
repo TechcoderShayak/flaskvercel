@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ObjectDetection-YOLOv8</title>
+    <style>
+      body {
+         content: '';
+    position: absolute;
+    width: 100%;
+        max-width: 100%;
+    height: 1024px;
+    /* background-image: url(../images/illustration-section-01.svg); */
+    background-image: url(../static/images/back.jpg);
+    background-repeat: no-repeat;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          margin: 0;
+          padding: 0;
+      }
+        .fullscreen-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Put it behind other content */
+}
+        header.feature-box.right{
+        background-color:black;
+        color:white;
+        height:120px;
+        padding:5px;
+        text-align:right;
+        }
+       
+            .fullscreen-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Put it behind other content */
+}
+        ul{
+        list-style:none;
+        padding:0px;}
+        li{
+        display:inline-block;
+        background-color:gray;
+        border-radius:10px;
+        padding:10px;
+        margin:10px;
+        }
+        li:hover{
+        background-color:red;
+        margin:10px;
+        }
+        header a{
+        color:white;
+        text-decoration:none;
+        width:100%;
+        }
+        .details{
+        height:80px;
+        margin:40px;
+        padding:0px;
+        font-size:40px;
+        background-color:gray;
+        text-align:center;
+        color:black;
+        }
+
+
+        .features{
+        background:white;
+        color:gray;
+        display:flex;
+        flex-direction:row;
+        padding:20px;
+
+        }
+        .features figure
+        {/*background:pink;*/
+        width:400px;
+        margin:auto;
+        text-align:center;
+        text-transform:uppercase;
+        }
+        .features figure img{
+        border-radius:10%;
+        width:400px;
+        }
+        div.main{
+        display:flex;
+        margin:40px;
+        letter-spacing:1px;
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "Playfair Display";
+    letter-spacing: 5px;
+        }
+        }
+        .subpart2{
+        text-align:center;
+        text-transform:uppercase;
+        }
+        .subpart2 figure img{
+        border-radius:4%;
+        width:800px;
+        }
+        .contactpage{
+        margin:20px;
+        }
+        #textbox {
+       font-size: 18pt;
+        height: 42px;
+        width : 1000px;
+        }
+        #textboxes {
+       font-size: 18pt;
+        height: 42px;
+        width : 1000px;
+        }
+        footer{
+        background-color:black;
+        text-align:center;
+        margin:0px;
+        padding:0px;
+        color:white;
+        font-size:20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="feature-box right">
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+            
+            <li><a href="/FrontPage">Video</a></li>
+            <li><a href="/webcam">LiveWebcam</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+
+  
+
+                      <div class="fullscreen-bg">
+  <img src="../static/images/back.jpg" alt="Background Image">
+</div>
+
+    </figure>
+    </section>
+    <div class="main">
+ <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+    <div class="main">
+        <div class="subpart1">
+   <h1> PICTEXT AI :)</h1>
+   <h2>Welcome to our web app here you can upload a image and gathers information of objects in the picture and the real life relationship between them on the go. P.S. ENJOY!</h2>
+    <h1>Upload an Image</h1>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+     <!-- Add a button to test the app again -->
+    <form action="/test_again" method="POST">
+        
+        <a href="/home">Test Again</a>
+    </form>
+</div>
+</div>
+
+        </div>
+
+
+
+
+
+
+<footer>
+   
+                            
+</footer>
+</body>
+</html>

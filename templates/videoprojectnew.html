@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video</title>
+    <style>
+        body{          font-family: Arial, sans-serif;
+    background-image: url("../static/images/back2.jpg");/* Change the path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+            color:white;
+            margin:0px;
+            padding:0px;
+        }
+        header.feature-box.top{
+        background-color:black;
+        height:100px;
+        margin:0px;
+        padding:20px;
+        text-align:center;
+        }
+        header.feature-box.second{
+          font-family: Arial, sans-serif;
+    background-image:url("../static/images/back2.jpg");/* Change the path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+
+
+        height:50px;
+        text-align:center;
+        margin-top:-25px;
+        }
+        .features{
+          background-color:black;
+          width: 900px;
+          height: 700px;
+          border-radius: 35px;
+          object-fit: contain;
+          margin:20px;
+        }
+        section.col-sm{
+          background-color:black;
+          width: 1000px;
+          height: 650px;
+          border-radius: 35px;
+          object-fit: contain;
+          margin:40px;
+        }
+
+        img{
+          width: 900px;
+          height: 600px;
+          border-radius: 35px;
+          object-fit: contain;
+          margin:40px;
+        }
+
+        .new{
+        color:black;
+        margin:0px;
+        padding:10px;
+        background-color:green;
+        margin:0px;
+        margin-top:-10px;
+        }
+        /* styles.css */
+
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 20px;
+    color: #555;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+</head>
+<body>
+<header class="feature-box top">
+    <h1><strong>Object Detection using YOLOv8</strong></h1>
+</header>
+<header class="feature-box second">
+     <h1><strong>Output Video</strong></h1>
+</header>
+
+  <section class="col-sm " >
+          <img src="{{ url_for('video') }}"   alt="Upload video">
+
+  </section>
+<section>
+    <div class="new" >
+      <form method = 'POST' enctype="multipart/form-data" style="align-content: center; text-align: center;display: flex;">
+        {{form.hidden_tag()}}
+        {{form.file(class_="custom-file-input")}}
+
+        <div>
+        <button type="submit" name="favorite" value="x" class="btnCustom">
+            Submit
+        </button>
+      </div>
+     
+      </form>
+    </div>
+       
+  </div>
+    </section>
+
+ 
+    <a href="{{ url_for('test_again') }}">Test Again</a>
+
+</body>
+</html>

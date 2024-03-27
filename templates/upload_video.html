@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Video Upload and Object Detection</title>
+  <style>   
+    body{
+    font-family: Arial, sans-serif;
+    background-image: url('static/back3.jpg'); /* Change the path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+</style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Upload a Video for Object Detection</h1>
+    <form action="/upload_video" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload Video">
+    </form>
+    <br>
+    <h2>Object Detection Results</h2>
+    <div class="video-container">
+        <h3>Uploaded Video</h3>
+        <video controls>
+            <source src="{{ url_for('static', filename='uploads/uploaded_video.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="video-container">
+        <h3>Video with Object Detection</h3>
+        <video controls>
+            <source src="{{ url_for('static', filename='output_video.avi') }}" type="video/avi">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="object-info">
+        <h2>Detected Object Information</h2>
+        <ul>
+            {% for object_name, summary in wiki_summaries.items() %}
+                <li>
+                    <h3>{{ object_name }}</h3>
+                    <p>Confidence: {{ confidence }}%</p>
+                    <p>{{ summary }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
